@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: portfolio-service
+  namespace: portfolio
+spec:
+  selector:
+    app: portfolio
+  ports:
+  - protocol: TCP
+    port: 3000
+    targetPort: 3000
+  type: ClusterIP
